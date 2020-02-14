@@ -1,0 +1,50 @@
+import json
+
+def resetlog():
+    event_log = {
+        'is_online': False,
+        'is_main_menu': False,
+        'is_setup': False,
+        'is_fullsetup': False,
+        'is_fullsetup_roundpull': False,
+        'is_fullsetup_roundnum': False,
+        'is_fullsetup_roundtype': False,
+        'is_fullsetup_marketslist': False,
+        'is_fullsetup_addmarket': False,
+        'is_fullsetup_markets': False,
+        'is_fullsetup_consts': False,
+        'is_fullsetup_teams': False,
+        'is_fullsetup_teamnum': False,
+        'is_fullsetup_do_teamname': False,
+        'is_fullsetup_teamname': False,
+        'current_team_setup_num': 0,
+        'is_fullsetup_actnum': False,
+        'current_round_setup_num': 0,
+        'is_setup_roundnum': False,
+        'is_setup_rounds': False,
+        'is_setup_consts': False,
+        'current_const_setup_num': 0,
+        'current_market_state': {},
+        'settable_const_list': [],
+        'current_round_state': [],
+        'current_markets_list': [],
+        'is_game': False,
+        'current_game_round_num': 0,
+        'current_game_team_num': 0,
+        'current_game_act_num': 0,
+        'pending_quiz': False,
+        'pending_nextround': False,
+        'invest_gameplay': False,
+        'invest_gameplay_acts': False,
+        'current_game_markets_list': [],
+        'current_game_team_list': [],
+        'chosen_team_num': None,
+        'is_quiz_coef': False,
+        'quiz_gameplay': False,
+        'quiz_gameplay_coef': False,
+        'pending_countcoefs': False,
+    }
+    with open('EventLog.json', 'w') as event_file:
+        json.dump(event_log, event_file, indent=0)
+
+resetlog()
